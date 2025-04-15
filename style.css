@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+.main-img img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.learn-btn {
+  position: absolute;
+  top: 93%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-color: rgb(26, 143, 233);
+  color: white;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.learn-btn:hover {
+  background-color: rgb(56, 152, 236);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.learn-btn::before {
+  content: "📖";
+  position: absolute;
+  left: 5px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.learn-btn:hover::before {
+  opacity: 1;
+  left: 20px;
+}
+
+.shiva-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: rgb(192, 229, 242);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  line-height: 1.5;
+}
+
+.shiva-info p {
+  margin: 10px;
+}
+
+.shiva-info.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.close-btn {
+  margin-top: 20px;
+  padding: 10px 40px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+}
+
+.close-btn:hover {
+  background-color: rgb(223, 5, 5);
+}
+
+.close-btn::before {
+  content: "⛌";
+  opacity: 0;
+  position: absolute;
+  left: 5px;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover::before {
+  opacity: 1;
+  left: 45%;
+}
